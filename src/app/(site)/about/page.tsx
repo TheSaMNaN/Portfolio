@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: DESC,
     images: [
       {
-        url: `${baseURL}/images/og-image.webp`,
+        url: `${baseURL}/images/landing-1.png`,
         width: 1200,
         height: 640,
       },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     site: `${baseURL}/about`,
     title: TITLE,
     description: DESC,
-    images: `${baseURL}/images/og-image.webp`,
+    images: `${baseURL}/images/landing-1.png`,
   },
 };
 
