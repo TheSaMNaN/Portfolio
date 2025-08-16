@@ -39,7 +39,7 @@ const Img: React.FC<Props> = ({
       width={width}
       height={height}
       style={style}
-      src={isError || !src ? altImg : src}
+      src={isError ? altImg : src || altImg}
       className={["select-none", className].join(" ")}
     />
   );
