@@ -4,7 +4,7 @@ import addComma from "@/utils/addComma";
 
 const MyGoals = () => {
   // Example static project data — replace with your own API or state
-  const [project, setProject] = useState({
+  const [project] = useState({
     title: "Live Project: Anime-Themed Online Store",
     image: "/images/5900_7_04.jpg", // Change to your image
     current: 45, // progress so far
@@ -91,7 +91,7 @@ const MyGoals = () => {
                   <li>• Added new features based on user feedback</li>
                   <li>• Fixed bugs and improved performance</li>
                   <li>• Preparing for next release</li>
-                  <li>• Launched Customized Anime-themed "COMING SOON" page</li>
+                  <li>• Launched Customized Anime-themed &quot;COMING SOON&quot; page</li>
                   <li>• Gathering user feedback</li>
                   <li>• Preparing for next phase</li>
                 </>

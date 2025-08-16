@@ -45,58 +45,55 @@ const Contact = () => {
     }
   };
 
-const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
-  e.preventDefault();
+  const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  const valideets = contactFormValidation(form);
-  if (valideets) {
-    setErrorField(valideets);
-    return;
-  }
+    const valideets = contactFormValidation(form);
+    if (valideets) {
+      setErrorField(valideets);
+      return;
+    }
 
-  setLoading(true);
+    setLoading(true);
 
-  try {
-    const serviceId = "service_mippf16";
-    const templateId = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID!;
-    const userId = process.env.NEXT_PUBLIC_EMAIL_JS_USER_ID!;
+    try {
+      const serviceId = "service_mippf16";
+      const templateId = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID!;
+      const userId = process.env.NEXT_PUBLIC_EMAIL_JS_USER_ID!;
 
-    // Log for debugging
-    console.log({ serviceId, templateId, userId, form });
+      // Log for debugging
+      console.log({ serviceId, templateId, userId, form });
 
-console.log("FORM VALUES", form);
+      console.log("FORM VALUES", form);
+      await axios.post("https://api.emailjs.com/api/v1.0/email/send", {
+        service_id: "service_uumhk79",
+        template_id: templateId,
+        user_id: userId,
+        template_params: {
+          name: form.from_name,
+          email: form.from_email,
+          message: form.message,
+          title: "Contact Request",
+          time: new Date().toLocaleString(),
+        },
+      });
 
-const response = await axios.post("https://api.emailjs.com/api/v1.0/email/send", {
-  service_id: "service_uumhk79",
-  template_id: templateId,
-  user_id: userId,
-  template_params: {
-    name: form.from_name,
-    email: form.from_email,
-    message: form.message,
-    title: "Contact Request",
-    time: new Date().toLocaleString(),
-  },
-});
+      setLoading(false);
+      setForm(initForm);
 
-
-
-    setLoading(false);
-    setForm(initForm);
-
-    createModal(ModalUnexpectedError, {
-      title: "Thanks for Reaching Out!",
-      errorMessage:
-        "I've received your message and appreciate you getting in touch. I'll review your inquiry and respond as soon as possible. In the meantime, feel free to check out more of my work.",
-    });
-  } catch (err: any) {
-    console.error("EmailJS Error:", err?.response?.data || err.message);
-    createModal(ModalUnexpectedError, {
-      errorMessage: "Something went wrong. Please try again later.",
-    });
-    setLoading(false);
-  }
-};
+      createModal(ModalUnexpectedError, {
+        title: "Thanks for Reaching Out!",
+        errorMessage:
+          "I've received your message and appreciate you getting in touch. I'll review your inquiry and respond as soon as possible. In the meantime, feel free to check out more of my work.",
+      });
+    } catch (err: any) {
+      console.error("EmailJS Error:", err?.response?.data || err.message);
+      createModal(ModalUnexpectedError, {
+        errorMessage: "Something went wrong. Please try again later.",
+      });
+      setLoading(false);
+    }
+  };
 
 
   return (
