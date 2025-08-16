@@ -2,6 +2,8 @@ import React from "react";
 import Content from "./_modules";
 import type { Metadata } from "next";
 
+const baseURL = process.env.NEXT_BASEURL || "http://localhost";
+
 const TITLE = "About - Samnan Abdul Jaleel";
 const DESC =
   "Learn more about me, my journey as a front-end developer, and my passion for creating user-friendly and functional web experiences. Discover the skills and values that drive my work.";
@@ -10,15 +12,15 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: {
-    canonical: `{process.env.NEXT_BASEURL}/about`,
+    canonical: `${baseURL}/about`,
   },
   openGraph: {
-    url: `{process.env.NEXT_BASEURL}/about`,
+    url: `${baseURL}/about`,
     title: TITLE,
     description: DESC,
     images: [
       {
-        url: `{process.env.NEXT_BASEURL}/images/og-image.webp`,
+        url: `${baseURL}/images/og-image.webp`,
         width: 1200,
         height: 640,
       },
@@ -28,10 +30,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: `{process.env.NEXT_BASEURL}/about`,
+    site: `${baseURL}/about`,
     title: TITLE,
     description: DESC,
-    images: `{process.env.NEXT_BASEURL}/images/og-image.webp`,
+    images: `${baseURL}/images/og-image.webp`,
   },
 };
 

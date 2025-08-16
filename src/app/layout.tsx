@@ -11,21 +11,22 @@ const firaCode = Fira_Code({
   display: "swap",
 });
 
+const baseURL = process.env.NEXT_BASEURL || "http://localhost";
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_BASEURL!),
+  metadataBase: new URL(baseURL),
 
   title: "Samnan Abdul Jaleel",
   description: "Full-Stack Developer",
   alternates: {
-    canonical: process.env.NEXT_BASEURL,
+    canonical: baseURL,
   },
   openGraph: {
-    url: process.env.NEXT_BASEURL,
+    url: baseURL,
     title: "Samnan Abdul Jaleel",
     description: "Full-Stack Developer",
     images: [
       {
-        url: `{process.env.NEXT_BASEURL}/images/og-image.webp`,
+        url: `${baseURL}/images/og-image.webp`,
         width: 1200,
         height: 640,
       },
@@ -35,10 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: process.env.NEXT_BASEURL,
+    site: baseURL,
     title: "Samnan Abdul Jaleel",
     description: "Full-Stack Developer",
-    images: `{process.env.NEXT_BASEURL}/images/og-image.webp`,
+    images: `${baseURL}/images/og-image.webp`,
   },
 
   authors: [
