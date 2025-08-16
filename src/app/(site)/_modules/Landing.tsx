@@ -34,7 +34,7 @@ const Landing = () => {
               I&apos;m passionate about turning ideas into reality—whether
               it&#39;s crafting seamless user interfaces or building powerful back-end systems.
               I focus on clean code, performance, and creating smooth, engaging digital experiences.
-              Let's build something amazing together! 🚀💻 #FullStackDev #CodeCrafting
+              Let&#39;s build something amazing together! 🚀💻 #FullStackDev #CodeCrafting
             </motion.p>
             <motion.div
               variants={fadeIn("up", "spring", 0.2, 0.4)}
