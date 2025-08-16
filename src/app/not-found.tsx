@@ -22,7 +22,7 @@ const NotFound = () => {
         >
           <Img
             alt="Samnan Abdul Jaleel"
-            src="/images/landing-1.png"
+            src="/images/samnanjaleel.svg"
             altImg="/icons/samnanjaleel.svg" // fallback image
             height="1410"
             width="1360"
