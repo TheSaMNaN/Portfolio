@@ -57,7 +57,6 @@ const Project = () => {
                 alt="project"
                 className=" object-cover object-center w-full"
               />
-              <p className="border-y border-gray px-4">{x.contribution}</p>
               <div className="p-4">
                 <p className="text-24 font-medium">{x.title}</p>
                 <p className="text-gray mb-4">{x.desc}</p>
