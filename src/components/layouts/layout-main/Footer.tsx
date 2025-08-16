@@ -3,7 +3,7 @@ import Icon from "@/components/elements/Icon";
 export const SOCIALS = [
   {
     name: "Github",
-    linkTo: "https://github.com/SamnanAbdulJaleel",
+    linkTo: "https://github.com/TheSaMNaN",
     icon: "/icons/github.svg",
   },
   {
@@ -34,7 +34,7 @@ const Footer = () => {
         ))}
       </div>
       <p className="text-gray text-center text-sm">
-          Samnan Abdul Jaleel
+        Samnan Abdul Jaleel
       </p>
     </footer>
   );
