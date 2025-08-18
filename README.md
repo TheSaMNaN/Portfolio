@@ -110,9 +110,10 @@ Feel free to fork and customize it for your own portfolio.
 ## 👨‍💻 Connect Me
 
 **Email: [samnanjaleel22@gmail.com](https://samnanjaleel22@gmail.com)** 
+
 **Let’s connect on [LinkedIn](https://www.linkedin.com/in/samnan-jaleel) 🚀**
 
 ---
 
-            ⭐ If you found this project useful, consider giving it a star!
+<p align="center">⭐ If you found this project useful, consider giving it a star!
 
