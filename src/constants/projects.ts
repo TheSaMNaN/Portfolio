@@ -13,11 +13,11 @@ export const PROJECTS = [
     img_src: "/images/projects/portfolio.png",
   },
   {
-    title: "Placeholder",
-    desc: "Just a placeholder to be replaced later for project description.",
-    link: "https://acme.com",
+    title: "Fandono — Coming Soon Page",
+    desc: "A live Coming Soon page for Fandono, a sub-brand anime niche website under Myprus, created as part of their main brand development process.",
+    link: "https://github.com/TheSaMNaN/Fandono-prelaunch",
 
-    img_src: "/images/projects/portfolio.png",
+    img_src: "/images/projects/Cmsoon.png",
   },
   {
     title: "Placeholder",
